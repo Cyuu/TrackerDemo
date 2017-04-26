@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tracker</string>
+
+    <string name="version_code">1</string>
+    <string name="version_name">1.0</string>
+
+    <string name="map_key">ZxXdt4eYenSIeGcpiNhry5KFH3Mn3Fjz</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="detail_name" >detail</string>
+    <string name="title_name" >title</string>
+    <string name="str_locating" >正在定位...</string>
+    <string name="str_init_input" >小主，写点什么吧~</string>
+
+
+
+</resources>

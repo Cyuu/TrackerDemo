@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#da6a2b</color>
+    <color name="colorPrimaryDark">#d66029</color>
+    <color name="colorAccent">#0066ff</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="white_trans">#AAffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="trans_black">#66000000</color>
+    <color name="trans_black_10">#10000000</color>
+
+    <color name="green_color">#2cb200</color>
+    <color name="green_deep_color">#008000</color>
+    <color name="green_black_color">#6f8a54</color>
+
+    <!-- 导航栏的黑线 -->
+    <color name="gray">#d2d2d2</color>
+    <color name="gray_deep">#b4b4b4</color>
+    <color name="bg_gray">#F0F0F0</color>
+    <color name="line_gray">#888888</color>
+
+    <color name="black">#222222</color>
+    <color name="black_light">#4d4d4d</color>
+    <color name="black_light_color">#666666</color>
+    <color name="black_trans">#dd333333</color>
+
+    <color name="yellow_color">#FFAA00</color>
+    <color name="orange_color">#da6a40</color>
+
+    <color name="red_trans">#bbff4444</color>
+    <color name="red_color">#E4675C</color>
+    <color name="red_deep_color">#d90000</color>
+
+    <color name="purple_color">#800080</color>
+    <color name="purple_light_color">#7d456a</color>
+
+    <color name="blue">#0000ff</color>
+    <color name="blue_color">#0066ff</color>
+    <color name="blue_light_color">#4d8be8</color>
+    <color name="blue_deep_color">#0000aa</color>
+
+    <color name="color_icon_black">#34485E</color>
+
+</resources>

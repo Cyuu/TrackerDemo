@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'com.neenbedankt.android-apt'//使用butterknife；eventbus的注解索引特性也需要这个插件
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.2'
+
+    // 解决Android L上通知显示异常问题, targetSdkVersion需要设置成22
+    defaultConfig {
+        applicationId "com.cyun.tracker"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs'];
+        }
+    }
+
+    greendao {
+        schemaVersion 10  // 指定数据库schema版本号，迁移等操作会用到
+        daoPackage 'com.cyun.tracker.gen'  // 通过gradle插件生成的数据库相关文件的包名，默认为你的entity所在的包名
+        targetGenDir 'src/main/java'  // 这就是我们上面说到的自定义生成数据库文件的目录了，
+    }
+
+}
+
+apt {
+    arguments {
+        eventBusIndex "com.cyun.tracker.MyEventBusIndex" //eventbus注解特性需要的索引
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support:appcompat-v7:24.1.1'
+    compile 'com.android.support:support-v4:24.1.1'
+    compile 'com.android.support:design:24.1.1'
+
+    // butterknife
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+
+//    compile 'com.android.support:cardview-v7:24.1.1'
+//    compile 'com.android.support:recyclerview-v7:24.1.1'
+
+    // eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    apt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+
+    // compile 'com.squareup.picasso:picasso:2.3.2'
+    // 3.5.2 // Glide的集成
+    //    compile 'com.github.bumptech.glide:glide:3.7.0'
+    // 1 注释，libs里引用eventbus，2 不注释，libs里删除eventbus.jar包
+    // okhttpUtils的引用
+    compile 'com.zhy:okhttputils:2.6.2'
+    //允许上下两方向刷新
+    compile 'com.github.orangegangsters:swipy:1.2.3@aar'
+
+    compile 'org.greenrobot:greendao:3.1.1'
+    compile 'org.greenrobot:greendao-generator:3.1.0'
+
+}
+
+

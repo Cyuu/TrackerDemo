@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_select"
+        android:icon="@drawable/ic_select"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_new"
+        android:icon="@drawable/ic_add"
+        android:orderInCategory="100"
+        android:visible="true"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_del"
+        android:icon="@drawable/ic_clear"
+        android:orderInCategory="100"
+        android:visible="true"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
+
+</menu>

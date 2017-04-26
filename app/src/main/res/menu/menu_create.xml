@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cyun.tracker.ui.CreateActivity">
+    <item
+        android:id="@+id/action_pic"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_pic"
+        android:title="插图"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_loc"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_location"
+        android:title="定位"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_done"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_commit"
+        android:title="完成"
+        app:showAsAction="ifRoom" />
+</menu>
